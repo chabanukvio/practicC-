@@ -6,10 +6,10 @@ using namespace std;
 int main() {
     double x, y, Y;
 
-    cout << "Введи x: ";
+    cout << "Write x: ";
     cin >> x;
 
-    cout << "Введи y: ";
+    cout << "Write y: ";
     cin >> y;
 
     if (x <= 0) {
@@ -18,7 +18,7 @@ int main() {
         Y = sqrt(x) + cos(y); // sqrt(x) + cos(y)
     }
 
-    cout << "Результат Y = " << Y << endl;
+    cout << "Results Y = " << Y << endl;
 
     return 0;
 }

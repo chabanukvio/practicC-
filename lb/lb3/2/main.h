@@ -6,11 +6,8 @@
 #define PROJECTCPP_MAIN_H
 
 
-
 class main {
-
 };
-
 
 
 #endif //PROJECTCPP_MAIN_H

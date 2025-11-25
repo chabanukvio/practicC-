@@ -1,1 +1,47 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
 
+using namespace std;
+
+int main() {
+    double a, b, h, x, y;
+    
+    cout << "Tabulation function y = x^(3/4) + 6" << endl;
+    
+    // Введення даних
+    cout << "Enter the start of the interval a: ";
+    cin >> a;
+    cout << "Enter the end of the interval b: ";
+    cin >> b;
+    cout << "Enter step h: ";
+    cin >> h;
+    
+    cout << "\nTabulation results:" << endl;
+    cout << "-------------------" << endl;
+    cout << "|   X   |   Y    |" << endl;
+    cout << "-------------------" << endl;
+    
+    // Цикл з передумовою while
+    x = a;
+    while(x <= b) {
+        // Перевірка ОДЗ: x не може бути від'ємним для дробного степеня
+        if(x < 0) {
+            cout << "| " << setw(6) << x << " | не належить ОДЗ |" << endl;
+            break;  // Зупиняємо виконання при порушенні ОДЗ
+        }
+        
+        // Обчислення функції y = x^(3/4) + 6
+        y = pow(x, 0.75) + 6;
+        
+        // Вивід результату
+        cout << "| " << fixed << setprecision(2) << setw(6) << x 
+             << " | " << setw(6) << y << " |" << endl;
+        
+        x = x + h;  // Збільшення x на крок h
+    }
+    
+    cout << "-------------------" << endl;
+    
+    return 0;
+}
